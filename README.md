@@ -56,8 +56,28 @@
 ## スタート手順
 
 1. リポジトリをclone
-2. 必要なPythonライブラリをインストール
-3. FirebaseとOpenAIのAPIキー設定
-4. Streamlitで起動し動作確認
-5. Cloudへデプロイ・運用開始
+2. 仮想環境venv作成
+    ```bash
+    python -m venv .venv
+    ```
+
+3. 必要ライブラリをインストール
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. venvの起動
+    ```bash
+    .\.venv\Scripts\activate  
+    ```
+
+    権限問題でコマンドを受け付けない場合
+    ```bush
+    Set-ExecutionPolicy AllSigned -Scope CurrentUser 
+    ```
+
+5. streamlit起動・動作確認
+    ```bush
+    streamlit run ファイル名
+    ```
 
